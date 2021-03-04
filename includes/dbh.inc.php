@@ -1,12 +1,11 @@
 <?php
 
 $serverName = "localhost";
-$dBUsername = "root";
-$dBPassword = "";
-$dBName = "Dev-Server";
+$dataBaseUserName = "root";
+$dataBasePassword = "";
+$dataBaseName = "flyyrin-web";
+$connectDataBase = mysqli_connect($serverName, $dataBaseUserName, $dataBasePassword, $dataBaseName);
 
-$conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
-
-if (!$conn) {
+if (!$connectDataBase) {
     die("Connection failed: " . mysqli_connect_error());  
 }
